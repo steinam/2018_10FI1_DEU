@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang='de'>     <!-- Element Attribut -->
+    <head>          <!--Kopfinformation -->                   
+        <meta charset='utf-8'>   <!-- Codierung -->
+        <title>HTML ist cool </title> 
+    </head>
+    <body>
+        <h1>HTML DOM Manipulation</h1>
+        <form action="verarbeitung.php" method="POST">  <!-- GET-->
+            <label>Vorname</label>
+            <input type='text' name='Vorname'><br>
+            <label>FamName</label>
+            <input type='text' name='FamName'><br>
+            <label>Alter</label>
+            <input type="number" name='Alter' onmouseover="sayHello();"><br>
+        
+        Felder hinzufügen <input type="button" value="-" onClick="feld_minus2();">
+        <input type="button" value="+" onClick="feld_plus2();"> <br><br>
+        <div id='form'>
+
+        </div>
+            <button type="submit">Absenden</button>
+        </form>
+    </body>
+<script>
+
+    var feld = 1;
+    var feldm = 1;
+
+    function sayHello(){
+
+        alert("Hello");
+
+    }
+
+
+    function feld_plus2(){
+        if(feld <= 10) {
+            var inhalt = "Feld " + feld;
+            document.getElementById('form').innerHTML += 
+                "<label>Kind" + feld + "</label><input type='text' name='n_" + feld + "' value'" + inhalt + "'><br>";
+            feld++;
+        }
+    }
+
+    function feld_minus2() {
+        if (feld > feldm) {
+        feld--;
+        document.getElementById('form').innerHTML = "";
+            for (var zaehler = feldm; zaehler < feld; zaehler++) {
+                var inhalt = "Feld " + zaehler;
+                document.getElementById('form').innerHTML +=
+                "<label>Kind" + zaehler + "</label><input type='text' name='n_" + zaehler + "' value='" +
+                inhalt + "'><br>";
+            }
+        }
+    }
+</script>
+</html>
+
+<!-- 
+    http://bioub.github.io/d3.DOMVisualizer/
+<!DOCTYPE html>
+<html lang='de'>     
+    <head>                        
+        <meta charset='utf-8'> 
+        <title>HTML ist cool </title> 
+    </head>
+    <body>
+        <h1>HTML DOM Manipulation</h1>
+        <form action="verarbeitung.php" method="POST">
+            <label>Vorname</label>
+            <input type='text' name='Vorname'><br>
+            <label>FamName</label>
+            <input type='text' name='FamName'><br>
+            <label>Alter</label>
+            <input type="number" name='Alter'><br>
+            <label>Felder hinzufügen</label><input type="button" value="-" onClick="feld_minus2();">
+            <input type="button" value="+" onClick="feld_plus2();"> <br><br>
+        <div id='form'>
+        </div>
+            <button type="submit">Absenden</button>
+        </form>
+    </body>
+</html>
+-->
