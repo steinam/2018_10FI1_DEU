@@ -1,7 +1,0 @@
-{
-    "require": {
-        "monolog/monolog": "^1.23",
-        "twig/twig": "^2.5"
-    },
-"autoload": { "psr-4": { "Bookstore\\": "src" } }
-}
