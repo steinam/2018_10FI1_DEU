@@ -1,0 +1,27 @@
+main {
+	position: relative;
+}
+
+section {
+	position: absolute;
+	left: 300px;
+	top: 100px;
+	width: 250px;
+	height: 380px;
+	background-color: #F1F3F4;
+}
+
+img {
+	position: absolute;
+	top: 180px;
+}
+
+p {
+	position: absolute;
+	top: 136px;
+	width: 208px;
+	background-color: #FFFFE0;
+	border: 1px solid #804000;
+	margin: 0;
+	padding: 10px;
+}
